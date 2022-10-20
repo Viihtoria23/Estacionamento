@@ -8,7 +8,7 @@
  * Created: 06/10/2022
  */
 
-CREATE DATABASE IF NOT EXISTS estacionamentoo;
+CREATE DATABASE IF NOT EXISTS estacionamento;
 USE estacionamento;
 
 CREATE TABLE vaga(
