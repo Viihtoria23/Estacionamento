@@ -155,7 +155,7 @@ if(jTVaga.getSelectedRow()!= -1){
       }else{
           JOptionPane.showMessageDialog(null,"Selecione uma vaga", "Erro",JOptionPane.ERROR_MESSAGE);
       } 
-      readjTable();
+      readJTable();
  
 
         // TODO add your handling code here:
