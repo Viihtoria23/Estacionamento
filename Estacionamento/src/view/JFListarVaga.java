@@ -10,7 +10,7 @@ import model.dao.VagaDAO;
 import model.bean.Vaga;
 
 public class JFListarVaga extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form JFListarVaga
      */
@@ -69,20 +69,13 @@ public class JFListarVaga extends javax.swing.JFrame {
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
+                {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
                 "id vaga", "numero", "rua", "obliqua"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jScrollPane1.setViewportView(jTVaga);
 
         jBtnCadastrar.setText("Cadastrar Vaga");
@@ -93,6 +86,11 @@ public class JFListarVaga extends javax.swing.JFrame {
         });
 
         jBtEditar.setText("Editar Vaga");
+        jBtEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtEditarActionPerformed(evt);
+            }
+        });
 
         jBtnExcluir.setText("Excluir Vaga");
         jBtnExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -109,20 +107,20 @@ public class JFListarVaga extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jBtnCadastrar)
-                        .addGap(52, 52, 52)
-                        .addComponent(jBtEditar)
-                        .addGap(49, 49, 49)
-                        .addComponent(jBtnExcluir)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel1)
+                        .addGap(0, 405, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE))
-                        .addContainerGap())))
+                                .addComponent(jBtnCadastrar)
+                                .addGap(52, 52, 52)
+                                .addComponent(jBtEditar)
+                                .addGap(49, 49, 49)
+                                .addComponent(jBtnExcluir)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,6 +184,18 @@ if(jTVaga.getSelectedRow()!= -1){
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jBtEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtEditarActionPerformed
+        if(jTVaga.getSelectedRow() != -1){
+            int vagaSelecionada = (int)jTVaga.getValueAt(jTVaga.getSelectedRow(), 0);
+            JFAtualizarVaga av = new JFAtualizarVaga(vagaSelecionada);
+            av.setVisible(true);
+         } else{
+            JOptionPane.showMessageDialog(null, "Selecione uma vaga!", "Erro", JOptionPane.ERROR_MESSAGE);
+            
+        }
+        readJTable();
+    }//GEN-LAST:event_jBtEditarActionPerformed
 
     /**
      * @param args the command line arguments
