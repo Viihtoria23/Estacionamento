@@ -103,8 +103,6 @@ public class JFAtualizarVaga extends javax.swing.JFrame {
 
         jLabel2.setText("Id da Vaga");
 
-        lblIdVaga.setText("jLabel5");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(

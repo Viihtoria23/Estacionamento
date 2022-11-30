@@ -3,28 +3,28 @@ package model.bean;
 public class Motorista {
 
     private int idMotorista;
-    private String nomeCompleto;
+    private String nome;
     private String genero;
-    private String rg;
-    private String cpf;
-    private String celular;
+    private int RG;
+    private int CPF;
+    private int celular;
     private String email;
     private String senha;
 
-    public int getidMotorista() {
+    public int getIdMotorista() {
         return idMotorista;
     }
 
-    public void setidMotorista(int idMotorista) {
+    public void setIdMotorista(int idMotorista) {
         this.idMotorista = idMotorista;
     }
     
-    public String getNomeCompleto() {
-        return nomeCompleto;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNome(String nomeCompleto) {
-        this.nomeCompleto = nomeCompleto;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
     public String getGenero() {
         return genero;
@@ -34,27 +34,27 @@ public class Motorista {
         this.genero = genero;
     }
 
-    public String getRg() {
-        return rg;
+    public int getRG() {
+        return RG;
     }
 
-    public void setRg(String rg) {
-        this.rg = rg;
+    public void setRG(int RG) {
+        this.RG = RG;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCPF(int CPF) {
+        this.CPF = CPF;
     }
 
-    public String getCpf() {
-        return cpf;
+    public int getCPF() {
+        return CPF;
     }
 
-    public void setCelular(String celular) {
+    public void setCelular(int celular) {
         this.celular = celular;
     }
 
-    public String getCelular() {
+    public int getCelular() {
         return celular;
     }
 

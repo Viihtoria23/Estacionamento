@@ -195,9 +195,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblIdVaga">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel5"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>
