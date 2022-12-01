@@ -46,6 +46,8 @@ public class JFCadastrarVaga extends javax.swing.JFrame {
 
         label1.setText("label1");
 
+        setTitle("Cadastrar Vaga");
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Cadastrar Vaga");
 
@@ -169,7 +171,9 @@ public class JFCadastrarVaga extends javax.swing.JFrame {
     }//GEN-LAST:event_jRBObliquaActionPerformed
 
     private void jBtnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLimparActionPerformed
-        // TODO add your handling code here:
+ jTFRua.setText("");
+ jTFNumero.setText("");
+ BGtipoVaga.clearSelection();
     }//GEN-LAST:event_jBtnLimparActionPerformed
 
     private void jTFRuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFRuaActionPerformed

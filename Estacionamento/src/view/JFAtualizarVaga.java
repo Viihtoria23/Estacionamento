@@ -49,9 +49,15 @@ public class JFAtualizarVaga extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         lblIdVaga = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Atualizar Vaga");
 
         jBtnCancelar.setText("Cancelar");
+        jBtnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCancelarActionPerformed(evt);
+            }
+        });
 
         jTFRua.setText("Rua");
         jTFRua.addActionListener(new java.awt.event.ActionListener() {
@@ -203,8 +209,15 @@ public class JFAtualizarVaga extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnSalvarActionPerformed
 
     private void jBtnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLimparActionPerformed
-        // TODO add your handling code here:
+ jTFRua.setText("");
+ jTFNumero.setText("");
+ bGTipoVaga.clearSelection();
     }//GEN-LAST:event_jBtnLimparActionPerformed
+
+    private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
+  dispose();
+  
+    }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
